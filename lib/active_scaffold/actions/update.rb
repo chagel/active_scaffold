@@ -70,7 +70,7 @@ module ActiveScaffold::Actions
         end
         flash.now[:info] = as_(:updated_model, :model => ERB::Util.h((@updated_record || @record).to_label)) if active_scaffold_config.update.persistent
       end
-      render :action => 'on_update'
+      render :action => 'on_update', layout: false
     end
 
     def update_respond_to_xml

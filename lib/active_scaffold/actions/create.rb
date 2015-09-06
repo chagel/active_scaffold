@@ -64,7 +64,7 @@ module ActiveScaffold::Actions
         @saved_record = @record
         do_new
       end
-      render :action => 'on_create'
+      render :action => 'on_create', layout: false
     end
 
     def create_respond_to_xml
